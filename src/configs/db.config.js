@@ -3,7 +3,6 @@ import { db_url } from '../constants.js';
 
 const connectDB = async () => {
     try {
-        console.log(db_url);
         const conn = await mongoose.connect(`${db_url}`);
         console.log('Database connected', conn.connection.host);
     } catch (error) {
