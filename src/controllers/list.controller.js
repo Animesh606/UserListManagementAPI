@@ -9,7 +9,7 @@ const createList = async (req, res) => {
         const list = new List({ title, properties });
         await list.save();
 
-        res.status(201).json(list);
+        res.status(201).json({ message: "List created successfully", list });
     } catch (error) {
         res.status(500).json({ message: 'Server Error', error });
     }
